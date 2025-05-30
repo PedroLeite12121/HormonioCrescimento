@@ -1,0 +1,46 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Open+Sans&family=Montserrat&family=Poppins&display=swap');
+
+
+
+
+html, body{
+    position: relative;
+    min-height: 100vh;
+    background-size: cover;
+    color: white;
+    background-image: linear-gradient(30deg, rgb(17, 17, 17), rgb(43, 43, 43));
+    margin: 0;
+    background-repeat: no-repeat;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+nav{
+    z-index: 1;
+    font-size: 2.4vh;
+    background-image: linear-gradient(to left, rgb(59, 59, 59), rgb(34, 34, 34));
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 4vh;
+    justify-content: space-around;
+    font-weight: bold;
+}
+
+nav p{
+    margin: 1vh;
+}
+
+nav a:hover{
+    transition: 0.5s;
+    color: rgb(194, 194, 194);
+}
+
+nav img{
+    width: 1vw;
+}
+nav a{
+    transition: 0.5s;
+    color: white;
+    text-decoration: none;
+}

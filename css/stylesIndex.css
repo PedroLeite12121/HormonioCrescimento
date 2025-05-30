@@ -1,0 +1,38 @@
+
+
+
+#gh{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-left: 4vw;
+    width: 30vw;
+    border-radius: 4vh;
+}
+
+#topo{
+    transform: translateX(-40vw);
+    opacity: 0;
+    margin-top: 5vh !important;
+    margin: 0 auto;
+    margin-bottom: 10vh;
+    width: 85vw;
+    height: 70vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    transition: all 0.9s ease;
+}
+
+#topo.show{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+#topo h1{
+    font-size: 8vh;
+}
+
+div{
+    overflow-x: hidden;
+    width: 100%;
+}

@@ -1,0 +1,94 @@
+h1{
+    transform: translateX(-200px);
+    opacity: 0;
+    text-align: center;
+    font-size: 6vh;
+}
+
+h1.show{
+    transform: translateX(0);
+    opacity: 1;
+    transition: all 0.6s ease ;
+}
+
+section p{
+    font-size: 4vh;
+    width: 50vw;
+}
+
+section div{
+    transform: translateY(200px);
+    opacity: 0;
+    gap: 10vw;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+section div.show{
+    transform: translateX(0);
+    opacity: 1;
+    transition: all 0.6s ease;
+}
+
+section img{
+    width: 23vw;
+    border-radius: 2vh;
+}
+
+section{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    overflow-y: hidden;
+    opacity: 0;
+    background-color: rgb(44, 44, 44);
+    height: 60vh;
+    overflow-x: hidden;
+    margin-top: 7vh;
+    gap: 35vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section.show{
+    opacity: 1;
+    transition: all 0.6s ease ;
+}
+
+section svg{
+    cursor: pointer;
+    border-radius: 2vh;
+    height: 4.5vw;
+    width: 4.5vw;
+    position: absolute;
+}
+
+#buttonA{
+    opacity: 0;
+    left: 1vw;
+}
+
+#buttonB{
+    right: 1vw;
+}
+
+#buttonA.hide{
+    transition: all ease 0.6s;
+    opacity: 0;
+}
+
+#buttonB.hide{
+    transition: all ease 0.6s;
+    opacity: 0;
+}
+
+#buttonA.show{
+    transition: all ease 0.6s;
+    opacity: 1;
+}
+
+#buttonB.show{
+    transition: all ease 0.6s;
+    opacity: 1;
+}
