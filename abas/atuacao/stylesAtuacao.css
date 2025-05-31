@@ -1,0 +1,211 @@
+h1{
+    transform: translateX(-200px);
+    opacity: 0;
+    text-align: center;
+    font-size: 6vh;
+    margin-bottom: 2vh;
+}
+
+h1.show{
+    transform: translateX(0);
+    opacity: 1;
+    transition: all 0.6s ease ;
+}
+
+section p{
+    opacity: 0;
+    transform: translateY(20vh);
+    font-size: 4vh;
+    width: 50vw;
+}
+
+section p.show{
+    opacity: 1;
+    transform: translateX(0);
+    transition: 0.5s;
+}
+section div{
+    gap: 10vw;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+
+section img{
+    width: 23vw;
+    border-radius: 2vh;
+    opacity: 0;
+    transform: translateX(-20vh);
+}
+
+section img.show{
+    transition: 0.5s;
+    opacity: 1;
+    transform: translateX(0);
+}
+section{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    overflow-y: hidden;
+    opacity: 0;
+    background-color: rgb(44, 44, 44);
+    height: 60vh;
+    overflow-x: hidden;
+    gap: 35vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section.show{
+    opacity: 1;
+    transition: all 0.6s ease ;
+}
+
+section svg{
+    
+    border-radius: 2vh;
+    height: 4.5vw;
+    width: 4.5vw;
+    position: absolute;
+}
+
+#buttonA{
+    opacity: 0;
+    transition: all ease 0.6s;
+    left: 1vw;
+}
+
+#buttonB{
+    cursor: pointer;
+    right: 1vw;
+    transition: all ease 0.6s;
+}
+
+#buttonA.hide{
+    transition: all ease 0.6s;
+    opacity: 0;
+}
+
+#buttonB.hide{
+    cursor: default;
+    transition: all ease 0.6s;
+    opacity: 0;
+}
+
+#buttonA.show{
+    cursor: pointer;
+    transition: all ease 0.6s;
+    opacity: 1;
+}
+
+#buttonB.show{
+    cursor: pointer;
+    transition: all ease 0.6s;
+    opacity: 1;
+}
+
+.container{
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20vw;
+    background-image: linear-gradient(to left, rgb(82, 82, 82), rgb(99, 99, 99));
+    left: 50%;
+    transform: translate(-50%, -50%) translateY(-10vh);
+    opacity: 0;
+    margin-top: 10vh !important;
+    border-radius: 2vh;
+    position: absolute;
+    transition: 0.5s;
+
+}
+
+.container.show{
+    transition: 0.5s;
+    opacity: 1;
+    transform: translate(-50%, -50%) translateY(0);
+}
+
+.container:hover{
+    transition: 0.5s all ease;
+    background-color: rgb(124, 124, 124);
+}
+
+
+
+h2{
+    margin: 0;
+}
+
+.container img{
+    transition: 1s;
+    width: 10vh;
+}
+
+.container:hover img{
+    transform: translateX(5vw);
+}
+
+.container:hover img.mirror {
+    transform: translateX(-5vw) 
+}
+
+
+#wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+#sistemas{
+    z-index: -1;
+    width: 100vw;
+    bottom: 18.5vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    display: flex;
+    position: absolute;
+}
+
+#sistemas h2{
+    margin: 0;
+    text-align: center;
+    font-size: 4vh;
+}
+
+#sistemas p{
+    margin: 0;
+    padding: 1vh;
+    font-size: 3vh;
+}
+
+#sistemas .two{
+    display: flex;
+    flex-direction: column;
+}
+
+.two div{
+    transform: translateX(-10vh);
+    opacity: 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 2vh;
+    padding: 1vh;
+    margin: 3vh;
+    width: 28vw;
+    height: 23vh;
+    background-color: rgb(99, 99, 99);
+    background-image: linear-gradient(to left, rgb(104, 104, 104), rgb(92, 92, 92));
+}
+
+.two div.show{
+    transform: translateY(0);
+    opacity: 1;
+    transition: 0.6s;
+}
+
