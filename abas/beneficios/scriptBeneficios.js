@@ -8,9 +8,10 @@ window.addEventListener("load", () => {
     let h1 = document.querySelectorAll("section h1")
     let seta = document.querySelector("#seta")
     let img = document.querySelector(".container img")
+    let span = document.querySelector("span")
 
     img.classList.add("show")
-    
+    span.classList.add("show")
     seta.classList.add("show")
 
     container.forEach((contain, index) => {

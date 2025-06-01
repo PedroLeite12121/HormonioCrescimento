@@ -4,20 +4,22 @@ let section = document.querySelector("section")
 let h1 = document.querySelector("h1")
 let div = document.querySelector("section div")
 let containerBtn = document.querySelector(".container")
+let legenda = document.querySelector("figcaption")
+
+let indicatorA = document.querySelector("#one")
+let indicatorB = document.querySelector("#two")
+
+let indicatorSpan = document.querySelector("span")
 
 window.addEventListener("load", () => {
+    indicatorSpan.classList.add("show")
+    legenda.classList.add("show")
     img.classList.add("show")
     p.classList.add("show")
     h1.classList.add("show")
     section.classList.add("show")
     containerBtn.classList.add("show")
 })
-
-
-
-
-
-
 
 
 
@@ -44,12 +46,17 @@ function retornar() {
 
         i = i - 1
 
+        indicatorB.style.backgroundColor = "rgb(0, 0, 0)"
+        indicatorA.style.backgroundColor =  "rgb(155, 155, 155)"
+
         div.style.transition = "1s"
         div.style.transform = "translateX(200%)"
-        sleep(600).then(() => { 
+        sleep(300).then(() => { 
             p.textContent = "Quando sinalizado pelo hipotálamo, O GH (Growth Hormone) sai da Adeno-Hipófise e adentra os capilares sanguíneos, diminuindo temporariamente a quantidade de Carboidratos (glicose) no corpo e o substituindo por lipídios que serão utilizados como fonte de energia. Desta forma, ativando a produção de glicogênese."
             img.src = "/imgs/glicose.png"
 
+            legenda.innerText = "Molécula de glicose"
+            
             div.style.transition = "0s"
             div.style.transform = "translateX(-200%)"
            
@@ -72,13 +79,16 @@ function avancar() {
         btn1.classList.add("show")
         i = i + 1
 
-
+        indicatorA.style.backgroundColor = "rgb(0, 0, 0)"
+        indicatorB.style.backgroundColor = "rgb(155, 155, 155)"
 
         div.style.transition = "1s"
         div.style.transform = "translateX(-200%)"
-        sleep(600).then(() => { 
+        sleep(300).then(() => { 
             p.textContent = "Além de atuar no metabolismo de gorduras e carboidratos, promovendo sua quebra, o GH fará o fígado e outros tecidos sintetizarem IGF-1, semelhante a insulina, que auxilia no desenvolvimento do corpo, estimulando o  crescimento e proliferação celular. Juntos, o GH e o IGF-1  aumentam a produção de proteínas e a divisão celular"
             img.src = "/imgs/igf.png"
+
+            legenda.innerText = "Atuação do GH e produção de IGF-I"
 
             div.style.transition = "0s"
             div.style.transform = "translateX(200%)"
@@ -120,13 +130,14 @@ containerBtn.addEventListener("click", async () => {
         p.classList.remove("show")
         h1.classList.remove("show");
         div.classList.remove("show");
-        
+        legenda.classList.remove("show")
+        indicatorSpan.classList.remove("show")
 
 
 
         h1.textContent = "Sistemas Afetados";
 
-        await sleep(100);
+        await sleep(1);
 
         sistemas.forEach((sistema, index) => {
             setTimeout(() => {
@@ -136,6 +147,14 @@ containerBtn.addEventListener("click", async () => {
 
         h1.classList.add("show");
         conteudoAtual = 1;
+
+        seta.classList.add("disableHover")
+        containerBtn.classList.add("disableHover")
+
+        await sleep(1000)
+
+        seta.classList.remove("disableHover")
+        containerBtn.classList.remove("disableHover")
 
     } else {
 
@@ -147,21 +166,32 @@ containerBtn.addEventListener("click", async () => {
         });
         h1.classList.remove("show");
 
+        indicatorSpan.classList.add("show")
         p.classList.add("show")
         btn1.style.display = "block";
         btn2.style.display = "block";
         img.classList.add("show")
         div.classList.add("show");
+        legenda.classList.add("show")
 
         h1.textContent = "Como age no corpo";
 
-        await sleep(10)
+        await sleep(1)
 
         h1.classList.add("show");
 
         conteudoAtual = 0;
+
+        seta.classList.add("disableHover")
+        containerBtn.classList.add("disableHover")
+
+        await sleep(1000)
+
+        seta.classList.remove("disableHover")
+        containerBtn.classList.remove("disableHover")
+        
     }
 
-    await sleep(1000); // Delay before allowing another click
+    await sleep(500); // Delay before allowing another click
     cooldown = false;
 });

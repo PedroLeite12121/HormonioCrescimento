@@ -78,15 +78,18 @@ section p.show{
 }
 
 .topicos{
+    gap: 2vh;
     display: flex;
     font-size: 3.5vh;
-    bottom: 2vh;
+    bottom: 3vh;
+    margin-right: 2vw;
     position: absolute;
 }
 
 h4{
+    margin: 0;
+    margin-top: 2vh;
     min-width: 15vw;
-    margin: 2vh;
     cursor: pointer;
     transform: translateX(-20vw);
     opacity: 0;
