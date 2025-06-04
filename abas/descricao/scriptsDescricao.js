@@ -2,7 +2,7 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-window.addEventListener("load", () => {
+window.addEventListener("load", async () => {
     const square = document.querySelector("#square");
     const h1 = document.querySelector("h1");
     const p = document.querySelector("section p");
@@ -11,16 +11,24 @@ window.addEventListener("load", () => {
 
     const h4s = document.querySelectorAll("h4");
 
-    img.classList.add("show")
+
     square.classList.add("show");
+
+    await sleep(400)
     h1.classList.add("show");
     p.classList.add("show");
+
+    await sleep(500)
 
     h4s.forEach((h4, index) => {
         setTimeout(() => {
           h4.classList.add("show");
-        }, index * 240); 
+        }, index * 500); 
       });
+
+    await sleep(2000)
+
+    img.classList.add("show")
 });
 
 let btns = document.querySelectorAll("h4")

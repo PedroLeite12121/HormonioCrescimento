@@ -1,18 +1,21 @@
 h1{
-    transform: translateX(-200px);
+    margin-top: 3vh;
+    transform: translateY(-50px);
     opacity: 0;
     text-align: center;
     font-size: 6vh;
-    margin-bottom: 2vh;
+    margin-bottom: 1vh;
 }
 
 h1.show{
-    transform: translateX(0);
+    transform: translateY(0);
     opacity: 1;
     transition: all 0.6s ease ;
 }
 
 section p{
+    transition: 0.3s;
+    line-height: 6.5vh;
     opacity: 0;
     transform: translateY(20vh);
     font-size: 4vh;
@@ -21,28 +24,27 @@ section p{
 
 section p.show{
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
     transition: 0.5s;
 }
 section div{
-    align-items: center;
     display: flex;
     flex-direction: row;
 }
 
-
-section img{
-
+figure img{
+    transition: 0.5s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     width: 23vw;
     border-radius: 2vh;
     opacity: 0;
-    transform: translateX(-20vh);
+    transform: translateY(-20vh);
 }
 
 section img.show{
     transition: 0.5s;
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
 }
 
 section{
@@ -107,7 +109,7 @@ section svg{
 }
 
 .container{
-    height: 8vh;
+    height: 10vh;
     overflow: hidden;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     cursor: pointer;
@@ -145,7 +147,7 @@ section svg{
 
 .container img.disableHover{
     cursor: default;
-    transform: translateX(0) !important;
+    transform: translateY(0) !important;
 }
 
 span div{
@@ -183,6 +185,9 @@ span #two{
 }
 
 h2{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
     margin: 0;
 }
 
@@ -192,11 +197,11 @@ h2{
 }
 
 .container:hover img{
-    transform: translateX(5vw);
+    transform: translateY(4vw);
 }
 
 .container:hover img.mirror {
-    transform: translateX(-5vw) 
+    transform: translateY(-4vw) 
 }
 
 
@@ -206,6 +211,7 @@ h2{
 }
 
 #sistemas{
+    transition: 0.5s;
     top: 0;
     z-index: -1;
     width: 100vw;
@@ -217,12 +223,15 @@ h2{
 }
 
 #sistemas h2{
+    min-width: 16vw;
+    transition: 0.5s;
+    margin-left: 1vw !important;
     margin: 0;
-    text-align: center;
     font-size: 4vh;
 }
 
 #sistemas h3{
+    transition: 0.5s;
     text-align: center;
     margin: 0;
     padding: 1vh;
@@ -237,16 +246,20 @@ h2{
 }
 
 .two div{
+    transition: 0.5s;
+    align-items: center;
+    justify-content: center;
     display: flex;
-    flex-direction: column;
-    transform: translateX(-10vh);
+    flex-direction: row;
+    transform: translateY(-10vh);
     opacity: 0;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 2vh;
-    padding: 1vh;
+    padding-left: 1vh;
+    padding-right: 1vh;
     margin: 3vh;
-    width: 30vw;
-    height: 23vh;
+    width: 33vw;
+    height: 25vh;
     background-color: rgb(99, 99, 99);
     background-image: linear-gradient(to left, rgb(104, 104, 104), rgb(92, 92, 92));
 }
@@ -258,6 +271,7 @@ h2{
 }
 
 figcaption{
+    transition: 0.3s;
     opacity: 0;
     font-size: 3vh;
 }

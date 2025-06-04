@@ -1,5 +1,5 @@
 let p = document.querySelector("section p")
-let img = document.querySelector("section img")
+let img = document.querySelector("figure img")
 let section = document.querySelector("section")
 let h1 = document.querySelector("h1")
 let div = document.querySelector("section div")
@@ -11,14 +11,23 @@ let indicatorB = document.querySelector("#two")
 
 let indicatorSpan = document.querySelector("span")
 
-window.addEventListener("load", () => {
-    indicatorSpan.classList.add("show")
-    legenda.classList.add("show")
-    img.classList.add("show")
-    p.classList.add("show")
+window.addEventListener("load", async () => {
     h1.classList.add("show")
+
+    await sleep(500)
+    indicatorSpan.classList.add("show")
+    
+    p.classList.add("show")
+    
+    
     section.classList.add("show")
+    
+    await sleep(100)
+    img.classList.add("show")
+    legenda.classList.add("show")
+    await sleep(500)
     containerBtn.classList.add("show")
+    
 })
 
 
@@ -52,7 +61,7 @@ function retornar() {
         div.style.transition = "1s"
         div.style.transform = "translateX(200%)"
         sleep(300).then(() => { 
-            p.textContent = "Quando sinalizado pelo hipotálamo, O GH (Growth Hormone) sai da Adeno-Hipófise e adentra os capilares sanguíneos, diminuindo temporariamente a quantidade de Carboidratos (glicose) no corpo e o substituindo por lipídios que serão utilizados como fonte de energia. Desta forma, ativando a produção de glicogênese."
+            p.textContent = "Quando sinalizado pelo hipotálamo, O GH (Growth Hormone) sai da Adeno-Hipófise e adentra os capilares sanguíneos, diminuindo temporariamente a quantidade de carboidratos (glicose) no corpo e o substituindo por lipídios que serão utilizados como fonte de energia. Desta forma, ativando a produção de glicogênese."
             img.src = "/imgs/glicose.png"
 
             legenda.innerText = "Molécula de glicose"
@@ -60,7 +69,7 @@ function retornar() {
             div.style.transition = "0s"
             div.style.transform = "translateX(-200%)"
            
-            sleep(100).then(() => { 
+            sleep(10).then(() => { 
                 div.style.transition = "1s"
                 div.style.transform = "translateX(0%)"
             
@@ -93,7 +102,7 @@ function avancar() {
             div.style.transition = "0s"
             div.style.transform = "translateX(200%)"
             
-            sleep(100).then(() => { 
+            sleep(10).then(() => { 
                 div.style.transition = "1s"
                 div.style.transform = "translateX(0%)"
             })

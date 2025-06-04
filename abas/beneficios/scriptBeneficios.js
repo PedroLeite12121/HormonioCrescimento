@@ -2,17 +2,19 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-window.addEventListener("load", () => {
+window.addEventListener("load", async () => {
     let container = document.querySelectorAll(".container")
     let ps = document.querySelectorAll(".container p")
-    let h1 = document.querySelectorAll("section h1")
+    let h1 = document.querySelector("section h1")
     let seta = document.querySelector("#seta")
     let img = document.querySelector(".container img")
     let span = document.querySelector("span")
 
-    img.classList.add("show")
+    h1.classList.add("show");
     span.classList.add("show")
-    seta.classList.add("show")
+    await sleep (500)
+    
+    
 
     container.forEach((contain, index) => {
         setTimeout(() => {
@@ -20,19 +22,18 @@ window.addEventListener("load", () => {
         }, index * 200); 
       });
 
-    ps.forEach((p, index) => {
+     ps.forEach((p, index) => {
         setTimeout(() => {
           p.classList.add("show");
         }, index * 200); 
     }); 
 
-    h1.forEach((h, index) => {
-        setTimeout(() => {
-          h.classList.add("show");
-        }, index * 400); 
-    }); 
+    await sleep(400)
 
-      
+    img.classList.add("show")
+
+    await sleep(600)
+    seta.classList.add("show")
  
 })
 
@@ -60,7 +61,12 @@ btn.addEventListener("click", () => {
     p[2].textContent = 'Crescimento de órgãos internos'
     p[3].textContent = 'Síndrome do túnel do carpo e dores articulares'
     p[4].textContent = 'Maior risco de câncer'
+
+ 
+    
+
     img.src = '/imgs/negativo.png'
+    img.style.backgroundImage = "linear-gradient(to left, rgb(46, 46, 46), gray)"
 
     sleep(100).then(() => { 
       img.classList.add("show")
@@ -90,6 +96,11 @@ btn.addEventListener("click", () => {
     p[4].textContent = 'Melhora na aparência da pele e cabelo'
     img.src = '/imgs/ramon.png'
     i = 0
+
+
+    img.style.backgroundImage = "linear-gradient(to left, rgb(248, 248, 248), gray)"
+
+    
 
     sleep(10).then(() => { 
         img.classList.add("show")

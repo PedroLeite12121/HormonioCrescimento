@@ -1,5 +1,5 @@
 section h1{
-    transform: translateX(-100px);
+    transform: translateX(100px);
     opacity: 0;
     font-size: 6.5vh;
     position: absolute;
@@ -9,13 +9,16 @@ section h1{
 }
 
 section p{
+    transform: translateX(-10vw);
     opacity: 0;
     margin-top: 10vh;
     font-size: 3.5vh;
+    line-height: 6vh;
     width: 60vw;
 }
 
 section p.show{
+    transform: translateX(0);
     transition: 0.6s ease all;
     opacity: 1;
 }
@@ -46,8 +49,7 @@ section{
 
 
 .botoes p{
-    
-    transform: translateX(20px);
+    transform: translateX(-20px);
     opacity: 0;
     font-size: 2.6vh;
     text-align: center;
@@ -58,8 +60,7 @@ section{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: 0.6s all ease;
     cursor: pointer;
-    border-top-left-radius: 1vh;
-    border-bottom-left-radius: 1vh;
+    border-radius: 1vh;
     padding: 1.5vh;
     background-color: rgb(94, 91, 91);
     width: 20vw;
@@ -71,15 +72,20 @@ section{
     transition: 0.6s ease all;
 }
 .botoes{
-    padding-left: 2vh;
-    overflow: hidden;
+    padding-left: 5vh;
     right: 0;
     margin-top: 15vh;
     position: absolute;
 }
 
 .botoes p:hover{
-    transform: translateX(-1vw);
+    transform: translateX(-2vw);
     transition: 0.6s all ease;
     background-color: rgb(112, 112, 112);
+}
+
+.botoes p.disableHover{
+    transform: translateX(0) !important;
+    background-color: rgb(94, 91, 91);
+    cursor: default;
 }

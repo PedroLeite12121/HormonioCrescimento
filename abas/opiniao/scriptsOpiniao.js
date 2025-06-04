@@ -2,6 +2,23 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+window.addEventListener("load", async () => {
+    h1.classList.add("show")
+    await sleep(700)
+    
+    texto.classList.add("show")
+
+    await sleep(500)
+
+    btns.forEach((btn, index) => {
+        setTimeout(() => {
+          btn.classList.add("show");
+        }, index * 600); 
+    });
+})
+
+
+
 let btns = document.querySelectorAll(".botoes p")
 
 btns[0].onclick = opiniao
@@ -12,11 +29,11 @@ btns[3].onclick = alternativas
 let h1 = document.querySelector("section h1")
 let texto = document.querySelector("section p")
 
-function opiniao() {
+async function opiniao() {
     h1.classList.remove("show")
     texto.classList.remove("show")
    
-    h1.textContent = "Opinião Crítica do Grupo"
+    h1.textContent = "Opinião crítica do grupo"
     texto.textContent = "O uso do hormônio deve ser restrito apenas em casos de necessidade como o déficit hormonal do GH ou em casos denanismo, sobre prescrição médica. Não concordamos com o uso da substância para fins estéticos, já que a mesma não traz benefícios para saúde e é uma prática antiética em esportes como o fisiculturismo, indo contrar os fundamentos da disciplina e o foco. Outras práticas naturais como alimentação, exercícios físicos, saúde, bem estar e o sono, podem ter o mesmo resultado, que a substância, mas de uma forma mais equilibrada e saudável."
 
     
@@ -24,11 +41,18 @@ function opiniao() {
         h1.classList.add("show")
         texto.classList.add("show")
     })
+
+    
+    btns[0].classList.add("disableHover")
+
+    await sleep(1000)
+
+    btns[0].classList.remove("disableHover")
     
     
 }
 
-function necessario() {
+async function necessario() {
     h1.classList.remove("show");
     texto.classList.remove("show");
 
@@ -41,10 +65,14 @@ function necessario() {
     h1.classList.add("show");
     texto.classList.add("show");
     });
+    btns[1].classList.add("disableHover")
 
+    await sleep(1000)
+
+    btns[1].classList.remove("disableHover")
 }
 
-function etico() {
+async function etico() {
    h1.classList.remove("show");
     texto.classList.remove("show");
 
@@ -56,9 +84,15 @@ function etico() {
         texto.classList.add("show");
     });
 
+    btns[2].classList.add("disableHover")
+
+    await sleep(1000)
+
+    btns[2].classList.remove("disableHover")
+
 }
 
-function alternativas() {
+async function alternativas() {
     h1.classList.remove("show");
     texto.classList.remove("show");
 
@@ -70,16 +104,10 @@ function alternativas() {
         texto.classList.add("show");
     });
 
+    btns[3].classList.add("disableHover")
+
+    await sleep(1000)
+
+    btns[3].classList.remove("disableHover")
 }
-
-window.addEventListener("load", () => {
-    h1.classList.add("show")
-    texto.classList.add("show")
-
-    btns.forEach((btn, index) => {
-        setTimeout(() => {
-          btn.classList.add("show");
-        }, index * 400); 
-    });
-})
 
